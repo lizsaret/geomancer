@@ -16,9 +16,11 @@ that you want to reuse or share to other people:
         spellbook = SpellBook(
                      spells=[
                          DistanceToNearest("primary",
+                                            dburl="bigquery://tm-geospatial",
                                             source_table="geospatial.ph_osm.gis_osm_roads_free_1",
                                             feature_name="dist_primary"),
                          NumberOf("supermarket"
+                                   dburl="bigquery://geospatial",
                                    source_table="geospatial.ph_osm.gis_osm_pois_free_1",
                                    feature_name="num_supermarkets"),
                      ])
